@@ -23,9 +23,11 @@ jobs:
           base: header
           config_animations: yes
           config_timezone: America/Chicago
+          config_display: large
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           extras_css: |
             h1, h2, h3, h4 {
               color: #5B7DA9;
+              font-weight: bold;
             }
