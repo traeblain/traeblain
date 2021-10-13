@@ -19,7 +19,7 @@ jobs:
 
           # Options
           user: traeblain
-          template: tbcom
+          template: classic
           base: header
           config_animations: yes
           config_timezone: America/Chicago
