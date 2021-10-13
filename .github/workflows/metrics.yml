@@ -23,7 +23,7 @@ jobs:
           base: header
           config_animations: yes
           config_timezone: America/Chicago
-          config_display: large
+          config_display: regular
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
           extras_css: |
