@@ -10,7 +10,7 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: traeblain/metrics@latest
+      - uses: traeblain/metrics@master
         with:
           # Your GitHub token
           token: ${{ secrets.ACCESS_TOKEN }}
