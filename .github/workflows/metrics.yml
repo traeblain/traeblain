@@ -10,7 +10,7 @@ jobs:
   github-metrics:
     runs-on: ubuntu-latest
     steps:
-      - uses: lowlighter/metrics@latest
+      - uses: traeblain/metrics@latest
         with:
           # Your GitHub token
           token: ${{ secrets.ACCESS_TOKEN }}
@@ -19,7 +19,7 @@ jobs:
 
           # Options
           user: traeblain
-          # template: tbcom
+          template: tbcom
           base: header
           config_animations: yes
           config_timezone: America/Chicago
