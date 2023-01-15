@@ -17,10 +17,12 @@ jobs:
 
           # Options
           user: traeblain
-          template: classic
+          template: "@nord"
+          setup_community_templates: "traeblain/metrics@master:nord"
           base: header
           config_timezone: America/Chicago
-          plugin_calendar: yes
-          plugin_calendar_limit: 0
+          # plugin_calendar: yes
+          # plugin_calendar_limit: 0
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
+          
