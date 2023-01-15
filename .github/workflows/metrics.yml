@@ -17,8 +17,8 @@ jobs:
 
           # Options
           user: traeblain
-          template: "@nord"
-          setup_community_templates: traeblain/metrics@master:nord
+          # template: "@nord"
+          # setup_community_templates: traeblain/metrics@master:nord
           base: header
           config_timezone: America/Chicago
           # plugin_calendar: yes
