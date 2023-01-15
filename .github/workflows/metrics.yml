@@ -4,30 +4,23 @@ on:
   # Schedule updates (each hour)
   schedule: [{cron: "0 4 * * *"}]
   # Lines below let you run workflow manually and on each commit
-  push: {branches: ["master", "main"]}
   workflow_dispatch:
 jobs:
   github-metrics:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
-      - uses: lowlighter/metrics@v3.31
+      - uses: lowlighter/metrics@latest
         with:
-          # Your GitHub token
           token: ${{ secrets.ACCESS_TOKEN }}
-          # GITHUB_TOKEN is a special auto-generated token restricted to current repository, which is used to push files in it
-          committer_token: ${{ secrets.ACCESS_TOKEN }}
 
           # Options
           user: traeblain
-          template: tbcom
-          base: header
-          config_animations: yes
+          template: classic
+          base: header, activity, community, repositories, metadata
           config_timezone: America/Chicago
-          config_display: regular
+          plugin_calendar: yes
+          plugin_calendar_limit: 1
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          extras_css: |
-            h1, h2, h3, h4 {
-              color: #5B7DA9;
-              font-weight: bold;
-            }
