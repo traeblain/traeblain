@@ -25,4 +25,15 @@ jobs:
           # plugin_calendar_limit: 0
           plugin_isocalendar: yes
           plugin_isocalendar_duration: full-year
-          
+      - uses: actions/checkout@v2
+      - name: Find and Replace
+        uses: jacobtomlinson/gha-find-replace@v2
+        with:
+          find: "9be9a8"
+          replace: "86B9F7"
+          include: "**github-metrics.svg"
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          branch: ${{ github.ref }}
